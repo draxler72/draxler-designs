@@ -1,51 +1,127 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Helvetica, Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Helvetica, Arial, sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#0d0d0d;
-    color:white;
+background:#0b0b0b;
+color:#fff;
 }
 
-header{
-    text-align:center;
-    padding:70px 20px;
+.navbar{
+background:#000 !important;
+border-bottom:1px solid #d4af37;
 }
 
-header h1{
-    font-size:48px;
-    font-weight:bold;
-    letter-spacing:3px;
+.hero{
+padding:140px 20px 100px;
+text-align:center;
+background:linear-gradient(to bottom,#000,#111);
 }
 
-header p{
-    color:#bdbdbd;
-    margin-top:10px;
+.logo{
+width:180px;
+max-width:80%;
+margin-bottom:25px;
+border-radius:20px;
+box-shadow:0 0 25px rgba(212,175,55,.4);
+}
+
+.hero h1{
+font-size:52px;
+font-weight:bold;
+color:#d4af37;
+letter-spacing:3px;
+}
+
+.hero p{
+color:#ccc;
+font-size:20px;
+margin:15px 0 30px;
+}
+
+.btn{
+margin:8px;
+padding:12px 28px;
+border-radius:40px;
+font-weight:bold;
+}
+
+.btn-warning{
+background:#d4af37;
+border:none;
+color:#000;
+}
+
+.btn-warning:hover{
+background:#f1c75b;
+}
+
+.btn-outline-light:hover{
+background:#d4af37;
+border-color:#d4af37;
+color:#000;
 }
 
 section{
-    max-width:900px;
-    margin:auto;
-    padding:50px 20px;
+padding:80px 20px;
 }
 
 h2{
-    margin-bottom:20px;
-    color:#00d4ff;
+color:#d4af37;
+font-weight:bold;
+margin-bottom:30px;
+text-align:center;
 }
 
-.box{
-    background:#1a1a1a;
-    padding:20px;
-    border-radius:12px;
-    line-height:2;
+.services .card{
+background:#161616;
+border:1px solid #d4af37;
+color:white;
+padding:30px;
+margin-bottom:25px;
+transition:.4s;
+border-radius:15px;
+}
+
+.services .card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 20px rgba(212,175,55,.4);
+}
+
+img{
+max-width:100%;
 }
 
 footer{
-    text-align:center;
-    padding:30px;
-    color:#888;
+background:#000;
+padding:30px;
+text-align:center;
+color:#999;
+border-top:1px solid #d4af37;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:36px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.logo{
+width:140px;
+}
+
+.btn{
+display:block;
+width:100%;
+margin:10px 0;
+}
+
 }
