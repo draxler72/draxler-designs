@@ -9,25 +9,20 @@ scroll-behavior:smooth;
 body{
 background:#0b0b0b;
 color:#fff;
+overflow-x:hidden;
 }
 
 .navbar{
 background:#000 !important;
 border-bottom:1px solid #d4af37;
+backdrop-filter:blur(10px);
 }
 
 .hero{
 padding:140px 20px 100px;
 text-align:center;
 background:linear-gradient(to bottom,#000,#111);
-}
-
-.logo{
-width:180px;
-max-width:80%;
-margin-bottom:25px;
-border-radius:20px;
-box-shadow:0 0 25px rgba(212,175,55,.4);
+animation:fadeIn 1.2s ease;
 }
 
 .hero h1{
@@ -48,6 +43,11 @@ margin:8px;
 padding:12px 28px;
 border-radius:40px;
 font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px) scale(1.05);
 }
 
 .btn-warning{
@@ -58,6 +58,7 @@ color:#000;
 
 .btn-warning:hover{
 background:#f1c75b;
+box-shadow:0 0 20px rgba(212,175,55,.7);
 }
 
 .btn-outline-light:hover{
@@ -68,6 +69,7 @@ color:#000;
 
 section{
 padding:80px 20px;
+animation:fadeUp .8s ease;
 }
 
 h2{
@@ -77,23 +79,32 @@ margin-bottom:30px;
 text-align:center;
 }
 
-.services .card{
+.services .card,
+.card{
 background:#161616;
 border:1px solid #d4af37;
 color:white;
 padding:30px;
 margin-bottom:25px;
-transition:.4s;
 border-radius:15px;
+transition:.35s;
 }
 
-.services .card:hover{
-transform:translateY(-8px);
-box-shadow:0 0 20px rgba(212,175,55,.4);
+.services .card:hover,
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 25px rgba(212,175,55,.45);
 }
 
 img{
 max-width:100%;
+border-radius:15px;
+transition:.4s;
+}
+
+img:hover{
+transform:scale(1.03);
+box-shadow:0 0 25px rgba(212,175,55,.4);
 }
 
 footer{
@@ -102,6 +113,29 @@ padding:30px;
 text-align:center;
 color:#999;
 border-top:1px solid #d4af37;
+margin-top:60px;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(-30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 @media(max-width:768px){
@@ -114,14 +148,14 @@ font-size:36px;
 font-size:17px;
 }
 
-.logo{
-width:140px;
-}
-
 .btn{
 display:block;
 width:100%;
 margin:10px 0;
+}
+
+section{
+padding:60px 15px;
 }
 
 }
